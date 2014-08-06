@@ -1,5 +1,16 @@
-colorfulmeals.appspot.com
+HTML5 app to create and reuse checklists.
 
-"Colorful Meals" is a simple HTML5 app built using AngularJS. The app uses APIs provided by yummly.com to get recipes.
-User picks ingredients from at least one of 4 food groups, selects dietary options (low carb/low fat/dairy or gluten free)
-and is presented with recipes from several popular food blogs.
+This app was built using HTML5, CSS (bootstrap), AngularJS. Used Firebase for authentication as well as data storage. Hosted on Google App Engine. Tested using Karma.
+
+Features
+--------
+Create checklists 
+Strike/Unstrike items off list 
+Reset (so you can reuse the list) 
+Clone a list
+
+To be implemented
+-----------------
+Import a list 
+Share 
+Print

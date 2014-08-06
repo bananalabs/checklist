@@ -1,0 +1,10 @@
+<div>
+    <ul class="mychecklists list-group">
+        <li class="list-group-item" ng-repeat="checklist in mychecklists.checklists">
+            <a ng-href="#/main/checklistdetail/edit/{{checklist.$id}}">{{checklist.name}}</a>
+        </li>
+    </ul>
+</div>
+<div style="text-align: center;margin-top:20px">
+    <button class="btn btn-lg btn-primary" ng-click="mychecklists.submit()">Add New</button>
+</div>

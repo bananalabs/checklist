@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4">
+            <div class="account-wall">
+                <div class="signup-title">Registration</div>
+                <form id="signup_form" name="signup_form" class="signup_form"
+                      role="form" autocomplete="off" novalidate>
+                    <input type="text" id="name" name="name" placeholder="Name" ng-model="signup.user.name"
+                           class="form-control" required>
+                    <div class="error-messages" ng-if="signup.submitted"
+                         ng-messages="signup_form.name.$error"
+                         ng-messages-include="/partials/error-messages.html">
+                    </div>
+                    <input type="email" id="email" name="email" placeholder="Email" ng-model="signup.user.email"
+                           class="form-control" required>
+                    <div class="error-messages" ng-if="signup.submitted"
+                         ng-messages="signup_form.email.$error"
+                         ng-messages-include="/partials/error-messages.html">
+                    </div>
+                    <div class="error-messages" ng-if="signup.submitted" ng-messages="signup_form.email.$error">
+                        <div ng-message="userExists">Email is already in use</div>
+                    </div>
+                    <input type="password" id="password" name="password" placeholder="Password"
+                           ng-model="signup.user.password"
+                           class="form-control" ng-minlength="6">
+                    <div class="error-messages" ng-if="signup.submitted"
+                         ng-messages="signup_form.password.$error"
+                         ng-messages-include="/partials/error-messages.html">
+                    </div>
+                    <button class="btn btn-lg btn-primary" type="submit"
+                            ng-click="signup.submit()">
+                        Create Account</button>
+                </form>
+                <p>{{signup.message}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+

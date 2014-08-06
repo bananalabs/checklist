@@ -1,0 +1,21 @@
+<div class="container">
+    <form class="form-signin" role="form" name="signin_form" id="signin_form" autocomplete="off" novalidate>
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <input type="email" class="form-control" ng-model="signin.user.email"
+               placeholder="Email address" name="email" required autofocus>
+        <div class="error-messages" ng-if="signin.submitted"
+             ng-messages="signin_form.email.$error"
+             ng-messages-include="/partials/error-messages.html">
+        </div>
+        <br>
+        <input type="password" class="form-control" ng-model="signin.user.password"
+               placeholder="Password" name="password" required>
+        <div class="error-messages" ng-if="signin.submitted"
+             ng-messages="signin_form.password.$error"
+             ng-messages-include="/partials/error-messages.html">
+        </div>
+        <br>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="signin.submit()">Sign in</button>
+    </form>
+    <p style="text-align: center; font-size: 18px">{{signin.message}}</p>
+</div>

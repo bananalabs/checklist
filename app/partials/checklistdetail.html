@@ -1,0 +1,21 @@
+<div id="checklist" class="panel panel-default checklist">
+    <div class="panel-heading">
+        <click-to-edit value="checklistdetail.name" callback="checklistdetail.name_changed()"></click-to-edit>
+    </div>
+    <div class="items">
+        <form ng-submit="checklistdetail.addItem()">
+            <input type="text" style="width: 100%"
+                   ng-model="checklistdetail.newitem" placeholder="Add item">
+        </form>
+        <div class="checkbox" ng-repeat="item in checklistdetail.checklist.items">
+            <input type="checkbox" id="{{$index}}" ng-model="item.done">
+            <label for="{{$index}}" class="check-{{item.done}}">{{item.val}}</label>
+        </div>
+        <div class="button-group">
+            <button class="btn btn-primary" ng-click="checklistdetail.done()">Done</button>
+            <button class="btn btn-primary" ng-click="checklistdetail.reset()">Reset</button>
+            <button class="btn btn-primary" ng-click="checklistdetail.copy()">Copy</button>
+        </div>
+    </div>
+</div>
+
